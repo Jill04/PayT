@@ -1,0 +1,22 @@
+PayT
+
+
+To add a new token.
+i. Paste the address of the token at the “addToken” function on the smart contract.
+
+ii. Set the annual mint percent rate by selecting the “setAnnualMintPercentage” function on smart contract.
+
+Parameters included:- token address,minting rate
+
+(Note. Please set minting rate multiplied by 100 eg: for 5% mint rate use 500 and accordingly.)
+
+iii. Add the token address in the “js/Staking.js file” at line 33 variable tokenAddress at the end.
+
+iv. Add the token logo in the images folder and add the index,logo and name  in “token_logo.json”. Kindly set the index according to the token  addresses listed.
+
+To remove the Token.
+                     i. Paste the address of the token at the “removeToken” function.
+
+iii. Remove the token address in the “js/Staking.js file” at line 33 variable tokenAddress.
+
+iv. Remove the token logo in the images folder and the index,logo and name  in “token_logo.json”. Kindly set the index according to the token  addresses listed.
