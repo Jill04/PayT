@@ -100,33 +100,23 @@ async function tokenList(){
         tokens= await window.StakeInstance.methods.tokens(i).call();
             
                 tokenSymbol = await tokenInstance[i].methods.symbol().call();
-               
-              
                 var tokensym = document.createElement('div');
-
                 var linebreak =document.createElement('br')
-                
                 tokensym.innerHTML = tokenSymbol;
                 tokensym.id = "avltoken" + i;
 
                 var tokenImageDiv = document.createElement('div');
                 tokenImageDiv.className = "token-symbol";
-
                 var tokenImg = document.createElement('img');
-
                 tokenImg.src = data[i].logo;
-                
                 // tokenImageDiv.prepend(tokenImg);
-
                 tokensym.prepend(tokenImg);
                 tokensym.setAttribute('onclick', 'tokenToBeStaked(this.id)');
                 tokenDiv.appendChild(tokensym);
                 tokensym.appendChild(linebreak);
-            
-        }
+            }
     });
-   
-   
+
  }
 
   function tokenToBeStaked(id){
@@ -154,16 +144,13 @@ async function tokenList(){
                         {
                             var img = tokendata[i].logo; 
                             document.getElementById("token-logo").src=img;
-                            
                             document.getElementById("auint").innerHTML= tokendata[i].name;
                             document.getElementById("suint").innerHTML= tokendata[i].name;
                             document.getElementById("tuint").innerHTML= tokendata[i].name;
                         }
                     }
             });
-        
- }
-
+  }
 
 async function calcUserBalance(){
     let address = window.walletAddress;
@@ -271,8 +258,7 @@ async function unstake(){
     })
   }
 
-
-  function showLoader(text){
+function showLoader(text){
     $.LoadingOverlay("show", {
         image       : "images/loader.png",
         text        : text,
