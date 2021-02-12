@@ -41,7 +41,6 @@ contract("Staking", () => {
   describe("[Testcase 2: To stake the token after being approved ]", () => {
     it("Stake Token ", async () => {
       await token.approve(stake.address, getWith18Decimals(10));
-
       assert.isTrue(
         await stake.stake.call(token.address, getWith18Decimals(10))
       );
@@ -171,7 +170,6 @@ contract("Staking", () => {
         getWith18Decimals(10)
       );
       await stake.setPayNoderSlot(token.address, 2);
-
       try {
         assert.isFalse(
           await stake.addaccountToPayNode.call(token.address, account1)
